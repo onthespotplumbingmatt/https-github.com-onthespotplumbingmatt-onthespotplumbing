@@ -319,6 +319,17 @@
     .work-item:hover .work-visual img {
       transform: scale(1.05);
     }
+
+    /* Commercial Mechanical: crop the right side of the photo */
+    .work-item.commercial-mechanical .work-visual {
+      position: relative;
+    }
+    .work-item.commercial-mechanical .work-visual img {
+      width: 192%;
+      max-width: none;
+      object-fit: cover;
+      object-position: left center;
+    }
     .work-cap {
       padding: 1rem 1.15rem;
       font-weight: 600;
@@ -651,7 +662,7 @@
           <div class="work-visual"><img src="utility-laundry.jpg" alt="Utility / laundry sink" loading="lazy"></div>
           <div class="work-cap">Utility / laundry sink — professional emergency setup when disaster hits</div>
         </div>
-        <div class="work-item" onclick="openLightbox('commercial-mechanical.jpg')">
+        <div class="work-item commercial-mechanical" onclick="openLightbox('commercial-mechanical.jpg')">
           <div class="work-visual"><img src="commercial-mechanical.jpg" alt="Commercial mechanical" loading="lazy"></div>
           <div class="work-cap">Commercial mechanical — team installs for complex systems</div>
         </div>

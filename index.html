@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>On The Spot Plumbing Service | Reliable Plumbing Across Utah</title>
+  <meta name="description" content="On The Spot Plumbing Service — reliable, effective, on the spot solutions. Plumbing systems built for longevity well beyond expected capacity. Serving Utah, Salt Lake, Wasatch, Juab, Tooele & Duchesne Counties. Call (801) 372-1772." />
+  <meta name="theme-color" content="#232F3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --amazon: #232F3E;
+      --amazon-dark: #131A22;
+      --amazon-light: #37475A;
+      --green: #A6FF00;
+      --green-soft: #C6FF4D;
+      --bg: #E8EEF4;
+      --white: #ffffff;
+      --text: #172536;
+      --muted: #627386;
+      --line: #d0d8e0;
+      --radius: 16px;
+      --shadow: 0 10px 40px rgba(19, 26, 34, 0.12);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(1140px, 92%); margin: 0 auto; }
+
+    /* Header */
+    .topbar {
+      background: var(--amazon);
+      color: #fff;
+      font-size: 0.85rem;
+      padding: 0.55rem 0;
+    }
+    .topbar .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.5rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .topbar a:hover { color: var(--green); }
+    .topbar .phones { display: flex; flex-wrap: wrap; gap: 0.75rem 1.25rem; }
+
+    header.site-header {
+      background: var(--white);
+      border-bottom: 3px solid var(--green);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      min-height: 72px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-weight: 900;
+      color: var(--amazon);
+      line-height: 1.1;
+    }
+    .logo-mark {
+      background: var(--green);
+      color: var(--amazon-dark);
+      font-weight: 900;
+      padding: 0.45rem 0.55rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+    }
+    .logo small {
+      display: block;
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      font-weight: 700;
+      color: var(--muted);
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.4rem;
+      font-weight: 600;
+      color: var(--amazon-light);
+      font-size: 0.95rem;
+    }
+    .nav-links a:hover { color: var(--amazon); }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.75rem 1.25rem;
+      border-radius: 999px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary {
+      background: var(--green);
+      color: var(--amazon-dark);
+      box-shadow: 0 6px 20px rgba(166, 255, 0, 0.35);
+    }
+    .btn-primary:hover { background: var(--green-soft); }
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      border: 2px solid rgba(255,255,255,0.55);
+    }
+    .btn-outline:hover { border-color: var(--green); color: var(--green); }
+    .btn-dark {
+      background: var(--amazon);
+      color: #fff;
+    }
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--amazon);
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--amazon-dark) 0%, var(--amazon) 55%, #1a3a52 100%);
+      color: #fff;
+      padding: 4.5rem 0 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 80% 20%, rgba(166,255,0,0.12), transparent 50%);
+      pointer-events: none;
+    }
+    .hero .container {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(166,255,0,0.15);
+      color: var(--green);
+      border: 1px solid rgba(166,255,0,0.35);
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 1.1rem;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+    .hero h1 span { color: var(--green); }
+    .hero-lead {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.88);
+      max-width: 36rem;
+      margin-bottom: 1.75rem;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 0.85rem; margin-bottom: 1.5rem; }
+    .hero-promise {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.75);
+      border-left: 3px solid var(--green);
+      padding-left: 0.85rem;
+    }
+    .hero-card {
+      background: var(--white);
+      color: var(--text);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      box-shadow: var(--shadow);
+    }
+    .hero-card h3 {
+      color: var(--amazon);
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+    .hero-card ul { list-style: none; margin-bottom: 1.25rem; }
+    .hero-card li {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid var(--line);
+      font-weight: 500;
+      display: flex;
+      gap: 0.5rem;
+      align-items: flex-start;
+    }
+    .hero-card li:last-child { border-bottom: none; }
+    .hero-card li::before {
+      content: "✓";
+      color: #5e9b00;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .hero-card .phone-list a {
+      display: block;
+      font-weight: 800;
+      color: var(--amazon);
+      font-size: 1.15rem;
+      margin: 0.2rem 0;
+    }
+    .hero-card .phone-list a:hover { color: #5e9b00; }
+
+    /* Sections */
+    section { padding: 4.5rem 0; }
+    .section-label {
+      color: #5e9b00;
+      font-weight: 800;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-size: clamp(1.85rem, 3.5vw, 2.6rem);
+      font-weight: 900;
+      color: var(--amazon);
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 0.75rem;
+    }
+    .section-intro {
+      color: var(--muted);
+      max-width: 40rem;
+      margin-bottom: 2.25rem;
+      font-size: 1.05rem;
+    }
+
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+    }
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+    .service-card:hover {
+      box-shadow: var(--shadow);
+      transform: translateY(-3px);
+    }
+    .service-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(166,255,0,0.2);
+      display: grid;
+      place-items: center;
+      font-size: 1.25rem;
+      margin-bottom: 0.85rem;
+    }
+    .service-card h3 {
+      font-size: 1.1rem;
+      color: var(--amazon);
+      margin-bottom: 0.4rem;
+    }
+    .service-card p { color: var(--muted); font-size: 0.95rem; }
+
+    /* Why us */
+    .why-us { background: var(--white); }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .why-card {
+      background: var(--bg);
+      border-radius: var(--radius);
+      padding: 1.6rem;
+      border: 1px solid var(--line);
+    }
+    .why-card strong {
+      display: block;
+      color: var(--amazon);
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+    }
+    .why-card p { color: var(--muted); font-size: 0.95rem; }
+
+    /* Work / Gallery captions */
+    .work { background: var(--bg); }
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+    .work-item {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+    }
+    .work-visual {
+      aspect-ratio: 4/3;
+      background: linear-gradient(145deg, var(--amazon) 0%, var(--amazon-light) 100%);
+      display: grid;
+      place-items: center;
+      color: rgba(255,255,255,0.7);
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 1rem;
+      text-align: center;
+    }
+    .work-visual span {
+      background: rgba(166,255,0,0.15);
+      border: 1px solid rgba(166,255,0,0.3);
+      color: var(--green);
+      padding: 0.4rem 0.75rem;
+      border-radius: 8px;
+      font-size: 0.8rem;
+    }
+    .work-cap {
+      padding: 1rem 1.15rem;
+      font-weight: 600;
+      font-size: 0.92rem;
+      color: var(--amazon);
+    }
+
+    /* Process */
+    .process {
+      background: var(--amazon);
+      color: #fff;
+    }
+    .process h2 { color: #fff; }
+    .process .section-label { color: var(--green); }
+    .process .section-intro { color: rgba(255,255,255,0.75); }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.25rem;
+      counter-reset: step;
+    }
+    .step {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      position: relative;
+    }
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      display: grid;
+      place-items: center;
+      width: 36px;
+      height: 36px;
+      background: var(--green);
+      color: var(--amazon-dark);
+      font-weight: 900;
+      border-radius: 50%;
+      margin-bottom: 0.85rem;
+    }
+    .step h3 { font-size: 1.1rem; margin-bottom: 0.4rem; }
+    .step p { color: rgba(255,255,255,0.75); font-size: 0.95rem; }
+
+    /* CTA */
+    .cta {
+      background: linear-gradient(135deg, #1a3a52, var(--amazon));
+      color: #fff;
+      text-align: center;
+      padding: 4rem 0;
+    }
+    .cta h2 { color: #fff; margin-bottom: 0.75rem; }
+    .cta p { color: rgba(255,255,255,0.85); max-width: 36rem; margin: 0 auto 1.5rem; }
+    .cta-actions { display: flex; flex-wrap: wrap; gap: 0.85rem; justify-content: center; }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    .contact-info h3 {
+      color: var(--amazon);
+      font-size: 1.35rem;
+      margin-bottom: 0.75rem;
+    }
+    .contact-line {
+      display: flex;
+      gap: 0.85rem;
+      margin-bottom: 1.15rem;
+      align-items: flex-start;
+    }
+    .contact-line .icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(166,255,0,0.2);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+    .contact-line b { display: block; color: var(--amazon); }
+    .contact-line a {
+      font-weight: 700;
+      color: var(--text);
+    }
+    .contact-line a:hover { color: #5e9b00; }
+    .form {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      box-shadow: var(--shadow);
+    }
+    .form h3 {
+      color: var(--amazon);
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.85rem;
+    }
+    .form label {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--amazon);
+    }
+    .form label.full { grid-column: 1 / -1; }
+    .form input, .form select, .form textarea {
+      padding: 0.7rem 0.85rem;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      font: inherit;
+      background: var(--bg);
+      color: var(--text);
+    }
+    .form input:focus, .form select:focus, .form textarea:focus {
+      outline: 2px solid rgba(166,255,0,0.55);
+      border-color: var(--green);
+    }
+    .form textarea { min-height: 110px; resize: vertical; }
+    .form .btn { width: 100%; margin-top: 0.5rem; }
+
+    /* Footer */
+    footer {
+      background: var(--amazon-dark);
+      color: rgba(255,255,255,0.75);
+      padding: 2.5rem 0;
+    }
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .footer-logo {
+      color: #fff;
+      font-weight: 900;
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+    }
+    footer a { color: var(--green-soft); font-weight: 700; }
+    footer a:hover { color: var(--green); }
+    .footer-small { font-size: 0.9rem; }
+
+    /* Mobile */
+    @media (max-width: 850px) {
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        padding: 1rem 4%;
+        border-bottom: 1px solid var(--line);
+        box-shadow: var(--shadow);
+      }
+      .menu-toggle { display: block; }
+      .hero .container, .contact-grid { grid-template-columns: 1fr; }
+      .form-grid { grid-template-columns: 1fr; }
+      .hero { padding: 3rem 0 3.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="container">
+      <span>Serving Utah County · Salt Lake County · Wasatch · Juab · Tooele · Duchesne</span>
+      <div class="phones">
+        <a href="tel:8013721772">(801) 372-1772</a>
+        <a href="tel:4356609888">(435) 660-9888</a>
+        <a href="tel:3854504728">(385) 450-4728</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nav -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="#top">
+        <span class="logo-mark">OTS</span>
+        <span>ON THE SPOT<br><small>PLUMBING SERVICE</small></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#services">Services</a>
+        <a href="#work">Our Work</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#process">How It Works</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-primary" href="tel:8013721772">Call Now</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div>
+          <div class="badge">Reliable · Effective · On the Spot</div>
+          <h1>Plumbing that<br><span>outlasts expectations.</span></h1>
+          <p class="hero-lead">
+            We design and install systems for longevity well beyond typical capacity—backed by fast response, top-tier workmanship, and fair pricing families can trust.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="tel:8013721772">Call (801) 372-1772</a>
+            <a class="btn btn-outline" href="#contact">Request Service</a>
+          </div>
+          <p class="hero-promise">Our promise: <strong>reliable, effective, on the spot solutions.</strong></p>
+        </div>
+        <div class="hero-card">
+          <h3>Fast help when you need it</h3>
+          <ul>
+            <li>Emergency & same-day response when available</li>
+            <li>Residential & commercial plumbing</li>
+            <li>Systems built for long-term reliability</li>
+            <li>Clear communication & fair pricing</li>
+          </ul>
+          <div class="phone-list">
+            <a href="tel:8013721772">(801) 372-1772</a>
+            <a href="tel:4356609888">(435) 660-9888</a>
+            <a href="tel:3854504728">(385) 450-4728</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <div class="container">
+        <div class="section-label">What we do</div>
+        <h2>Services built for lasting performance</h2>
+        <p class="section-intro">From emergency repairs to full system installs—workmanship aimed at longevity, not shortcuts.</p>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon">🔥</div>
+            <h3>Water Heaters</h3>
+            <p>Tank & tankless installs, replacements, and repairs labeled and vented for years of service.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">🚿</div>
+            <h3>Drain Cleaning</h3>
+            <p>Camera inspection and clearing so you see the real condition of the line—not guesswork.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">🔍</div>
+            <h3>Leak Detection</h3>
+            <p>Find and fix leaks before they become costly damage. Precise, efficient diagnostics.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">🏠</div>
+            <h3>Remodel & Rough-In</h3>
+            <p>Basement finishes, bath remodels, and new construction plumbing done right the first time.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">🔧</div>
+            <h3>Water Mains & Lines</h3>
+            <p>Main line repair, PRV assemblies, and underground work with durable, accessible installs.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">🏢</div>
+            <h3>Commercial Mechanical</h3>
+            <p>Multi-unit heating, boiler assembly & repairs, and complex commercial piping systems.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">⚙️</div>
+            <h3>PEX & Distribution</h3>
+            <p>Organized manifolds and distribution systems engineered for longevity and serviceability.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">🚨</div>
+            <h3>Emergency Service</h3>
+            <p>Professional emergency sink setups and rapid response when disaster hits your home.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Work -->
+    <section class="work" id="work">
+      <div class="container">
+        <div class="section-label">Real jobs</div>
+        <h2>Our work in the field</h2>
+        <p class="section-intro">Authentic project work across residential and commercial jobs—not stock photos.</p>
+        <div class="work-grid">
+          <div class="work-item">
+            <div class="work-visual"><span>Drain camera</span></div>
+            <div class="work-cap">Drain camera inspection — see the real condition of the line</div>
+          </div>
+          <div class="work-item">
+            <div class="work-visual"><span>Fixture install</span></div>
+            <div class="work-cap">Fixture & tub install — clean finish work for the home</div>
+          </div>
+          <div class="work-item">
+            <div class="work-visual"><span>PEX manifold</span></div>
+            <div class="work-cap">PEX manifold / distribution — organized systems built to last</div>
+          </div>
+          <div class="work-item">
+            <div class="work-visual"><span>Water heater</span></div>
+            <div class="work-cap">Water heater replacement — labeled, vented, ready for years of service</div>
+          </div>
+          <div class="work-item">
+            <div class="work-visual"><span>Water main</span></div>
+            <div class="work-cap">Water main & PRV assembly — durable, accessible installs</div>
+          </div>
+          <div class="work-item">
+            <div class="work-visual"><span>Underground</span></div>
+            <div class="work-cap">Underground water line repair — excavation done right</div>
+          </div>
+          <div class="work-item">
+            <div class="work-visual"><span>Emergency sink</span></div>
+            <div class="work-cap">Utility / laundry sink — professional emergency setup when disaster hits</div>
+          </div>
+          <div class="work-item">
+            <div class="work-visual"><span>Commercial</span></div>
+            <div class="work-cap">Commercial mechanical — team installs for complex systems</div>
+          </div>
+          <div class="work-item">
+            <div class="work-visual"><span>Multi-unit heat</span></div>
+            <div class="work-cap">Multi-unit water heating — commercial capacity, clean layout</div>
+          </div>
+          <div class="work-item">
+            <div class="work-visual"><span>Core drilling</span></div>
+            <div class="work-cap">Core drilling through foundation — precise penetrations for new lines</div>
+          </div>
+          <div class="work-item">
+            <div class="work-visual"><span>Copper work</span></div>
+            <div class="work-cap">Copper soldering — precision joints built for longevity</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Us -->
+    <section class="why-us" id="why-us">
+      <div class="container">
+        <div class="section-label">Why On The Spot</div>
+        <h2>Systems engineered for longevity</h2>
+        <p class="section-intro">We build trust by helping families—with fast response, top-tier quality, and pricing that stays reasonable.</p>
+        <div class="why-grid">
+          <div class="why-card">
+            <strong>Built to outlast</strong>
+            <p>We design and install plumbing systems for longevity well beyond expected capacity—not just “good enough for now.”</p>
+          </div>
+          <div class="why-card">
+            <strong>Family-first service</strong>
+            <p>Clear communication, respectful crews, and solutions that protect your home and budget.</p>
+          </div>
+          <div class="why-card">
+            <strong>Fast response</strong>
+            <p>When water won’t wait, we prioritize rapid, effective help—on the spot when you need us.</p>
+          </div>
+          <div class="why-card">
+            <strong>Top-tier workmanship</strong>
+            <p>From copper joints to commercial mechanical rooms—clean installs and code-conscious detail.</p>
+          </div>
+          <div class="why-card">
+            <strong>Boiler assembly & repairs</strong>
+            <p>Commercial and residential boiler work, multi-unit heating, and mechanical room systems done right.</p>
+          </div>
+          <div class="why-card">
+            <strong>Our promise</strong>
+            <p>Reliable, effective, on the spot solutions—every job, every time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process" id="process">
+      <div class="container">
+        <div class="section-label">Simple process</div>
+        <h2>How it works</h2>
+        <p class="section-intro">Straightforward steps from first call to finished job.</p>
+        <div class="steps">
+          <div class="step">
+            <h3>Call or request</h3>
+            <p>Reach us by phone or form. Tell us what’s going on—emergency or scheduled.</p>
+          </div>
+          <div class="step">
+            <h3>We diagnose</h3>
+            <p>On-site assessment with clear options. No pressure—just solid recommendations.</p>
+          </div>
+          <div class="step">
+            <h3>We fix it right</h3>
+            <p>Quality parts, clean workmanship, and systems aimed at long-term performance.</p>
+          </div>
+          <div class="step">
+            <h3>You’re taken care of</h3>
+            <p>Walkthrough, answers to your questions, and a crew that treats your home with respect.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container">
+        <h2>Need a plumber you can count on?</h2>
+        <p>Reliable, effective, on the spot solutions—built for longevity and fair pricing. Serving families and businesses across Utah County and beyond.</p>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="tel:8013721772">Call (801) 372-1772</a>
+          <a class="btn btn-outline" href="#contact">Send a message</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-label">Get in touch</div>
+        <h2>Contact On The Spot Plumbing</h2>
+        <p class="section-intro">Call any number below or send a message—we’ll get back to you quickly.</p>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3>Reach us directly</h3>
+            <div class="contact-line">
+              <div class="icon">☎</div>
+              <div>
+                <b>Phone</b>
+                <a href="tel:8013721772">(801) 372-1772</a><br />
+                <a href="tel:4356609888">(435) 660-9888</a><br />
+                <a href="tel:3854504728">(385) 450-4728</a>
+              </div>
+            </div>
+            <div class="contact-line">
+              <div class="icon">✉</div>
+              <div>
+                <b>Email</b>
+                <a href="mailto:info@onthespotplumbingservice.com">info@onthespotplumbingservice.com</a>
+              </div>
+            </div>
+            <div class="contact-line">
+              <div class="icon">📍</div>
+              <div>
+                <b>Service area</b>
+                Utah County · Salt Lake County · Wasatch County · Juab County · Tooele County · Duchesne County
+              </div>
+            </div>
+            <div class="contact-line">
+              <div class="icon">⏱</div>
+              <div>
+                <b>Response</b>
+                Fast response for emergencies and scheduled work. Ask about same-day availability.
+              </div>
+            </div>
+          </div>
+
+          <form class="form" id="contactForm">
+            <h3>Request service</h3>
+            <div class="form-grid">
+              <label>Name<input type="text" name="name" placeholder="Your name" required /></label>
+              <label>Phone<input type="tel" name="phone" placeholder="(801) 000-0000" required /></label>
+              <label class="full">Email<input type="email" name="email" placeholder="you@example.com" /></label>
+              <label class="full">Service
+                <select name="service">
+                  <option>Water heater</option>
+                  <option>Tankless water heater</option>
+                  <option>Drain cleaning</option>
+                  <option>Leak detection</option>
+                  <option>Water main / water line</option>
+                  <option>Boiler assembly / repair</option>
+                  <option>Remodel / basement finish</option>
+                  <option>Emergency</option>
+                  <option>Other</option>
+                </select>
+              </label>
+              <label class="full">Message<textarea name="message" placeholder="Tell us what’s going on…"></textarea></label>
+            </div>
+            <button class="btn btn-primary" type="submit">Send request</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-logo">ON THE SPOT PLUMBING SERVICE</div>
+        <div class="footer-small">
+          Reliable · Effective · On the Spot · Built to Last<br />
+          <a href="tel:8013721772">(801) 372-1772</a> ·
+          <a href="tel:4356609888">(435) 660-9888</a> ·
+          <a href="tel:3854504728">(385) 450-4728</a><br />
+          <a href="mailto:info@onthespotplumbingservice.com">info@onthespotplumbingservice.com</a>
+        </div>
+      </div>
+      <div class="footer-small">© 2026 On The Spot Plumbing Service. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    const toggle = document.getElementById('menuToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+    // Form handler (connect to your email/CRM before going live)
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Thanks! Connect this form to your email or CRM (e.g. Formspree, Netlify Forms) before publishing.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>

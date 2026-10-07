@@ -784,6 +784,13 @@
             </div>
           </div>
           <div class="contact-line">
+            <div class="icon">✉</div>
+            <div>
+              <b>Email</b><br>
+              <a href="mailto:info@onthespotplumbing.com">info@onthespotplumbing.com</a>
+            </div>
+          </div>
+          <div class="contact-line">
             <div class="icon">⌖</div>
             <div>
               <b>Service Area</b><br>
@@ -848,8 +855,22 @@
     if (contactForm) {
       contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
-        alert('Thanks! Connect this form to your email or CRM before publishing.');
-        this.reset();
+        const name = contactForm.querySelector('input[placeholder="Your name"]').value.trim();
+        const phone = contactForm.querySelector('input[type="tel"]').value.trim();
+        const email = contactForm.querySelector('input[type="email"]').value.trim();
+        const service = contactForm.querySelector('select').value;
+        const message = contactForm.querySelector('textarea').value.trim();
+
+        const subject = encodeURIComponent('Website Service Request - ' + service);
+        const body = encodeURIComponent(
+          'Name: ' + name + '\n' +
+          'Phone: ' + phone + '\n' +
+          'Email: ' + (email || 'Not provided') + '\n' +
+          'Service: ' + service + '\n\n' +
+          'Job Details:\n' + (message || 'Not provided')
+        );
+
+        window.location.href = 'mailto:info@onthespotplumbing.com?subject=' + subject + '&body=' + body;
       });
     }
 

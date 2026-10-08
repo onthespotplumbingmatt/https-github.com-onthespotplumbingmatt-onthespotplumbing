@@ -870,9 +870,9 @@ jobs:
             BMjTwjiEgt0jg+i8IJOYMSNgEvpdWj5NZ3+lHGYzDpKbQwABJN38YzJPtCIHsB1D3uqfAE3CV/o6uBeI5IHqAAAA
         run: |
           python - <<'PY'
-          import base64, re
+          import base64, os, re
           from pathlib import Path
-          Path("header-exact.webp").write_bytes(base64.b64decode(""" + HEADER_B64 + """))
+          Path("header-exact.webp").write_bytes(base64.b64decode(os.environ["HEADER_B64"]))
           p = Path("index.html")
           html = p.read_text(encoding="utf-8")
           html2, n = re.subn(r'(<header\b[^>]*>.*?<img\s+)src="data:image/[^" ]+"', r'\1src="header-exact.webp"', html, count=1, flags=re.S|re.I)
